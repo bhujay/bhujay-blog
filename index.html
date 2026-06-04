@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhujay Behera — The Digital Dreamer from Odisha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --saffron: #E8650A;
+      --deep-teal: #0B5E55;
+      --warm-cream: #FAF6F0;
+      --ink: #1A1612;
+      --muted: #6B5E54;
+      --rule: #D9C9BC;
+      --highlight: #FFF4E6;
+    }
+
+    body {
+      background: var(--warm-cream);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    /* ---- MASTHEAD ---- */
+    .masthead {
+      background: var(--ink);
+      color: var(--warm-cream);
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 72px 40px 56px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tag-line {
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 24px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: #FFFAF5;
+      margin-bottom: 12px;
+    }
+
+    .subhead {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(16px, 2vw, 21px);
+      font-style: italic;
+      font-weight: 400;
+      color: #BFB3A8;
+      margin-bottom: 40px;
+    }
+
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .author-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--saffron);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .author-info { line-height: 1.3; }
+    .author-name { font-size: 13px; font-weight: 400; color: #FFFAF5; }
+    .pub-date { font-size: 12px; color: #8C7E75; letter-spacing: 0.04em; }
+
+    .reading-time {
+      font-size: 12px;
+      color: #8C7E75;
+      border-left: 1px solid #3A342E;
+      padding-left: 24px;
+      letter-spacing: 0.04em;
+    }
+
+    /* decorative line art in masthead */
+    .masthead-decor {
+      position: absolute;
+      right: -60px;
+      top: -40px;
+      width: 380px;
+      height: 380px;
+      opacity: 0.045;
+    }
+
+    /* ---- HERO RULE ---- */
+    .chapter-rule {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--saffron) 0%, var(--deep-teal) 100%);
+    }
+
+    /* ---- BODY ---- */
+    .article-body {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 700;
+      float: left;
+      line-height: 0.82;
+      margin-right: 10px;
+      margin-top: 6px;
+      color: var(--saffron);
+    }
+
+    p { margin-bottom: 1.4em; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2.4em 0 0.7em;
+      line-height: 1.25;
+    }
+
+    h2::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 3px;
+      background: var(--saffron);
+      margin-bottom: 14px;
+    }
+
+    .pull-quote {
+      border-left: 3px solid var(--saffron);
+      margin: 2.4em 0;
+      padding: 6px 0 6px 28px;
+    }
+
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--deep-teal);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .info-card {
+      background: var(--highlight);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin: 2.8em 0;
+    }
+
+    .info-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--saffron);
+      letter-spacing: 0.02em;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+    }
+
+    @media (max-width: 520px) { .info-grid { grid-template-columns: 1fr; } }
+
+    .info-item { display: flex; flex-direction: column; gap: 2px; }
+    .info-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+    .info-value { font-size: 15px; color: var(--ink); font-weight: 400; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 3em 0 1em;
+    }
+
+    .tag {
+      font-size: 12px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      color: var(--deep-teal);
+      border: 1px solid var(--deep-teal);
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .ending-rule {
+      text-align: center;
+      color: var(--rule);
+      font-size: 22px;
+      letter-spacing: 0.4em;
+      margin: 3.5em 0 2em;
+    }
+
+    footer {
+      background: var(--ink);
+      color: #8C7E75;
+      text-align: center;
+      padding: 28px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+
+    footer a { color: var(--saffron); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <svg class="masthead-decor" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="180" stroke="white" stroke-width="1"/>
+    <circle cx="200" cy="200" r="130" stroke="white" stroke-width="1"/>
+    <circle cx="200" cy="200" r="80" stroke="white" stroke-width="1"/>
+    <line x1="20" y1="200" x2="380" y2="200" stroke="white" stroke-width="0.8"/>
+    <line x1="200" y1="20" x2="200" y2="380" stroke="white" stroke-width="0.8"/>
+    <line x1="73" y1="73" x2="327" y2="327" stroke="white" stroke-width="0.6"/>
+    <line x1="327" y1="73" x2="73" y2="327" stroke="white" stroke-width="0.6"/>
+  </svg>
+
+  <div class="masthead-inner">
+    <p class="tag-line">Profile · Odisha Entrepreneurs</p>
+    <h1 class="headline">Bhujay Behera:<br/>The Digital Dreamer<br/>from Odisha</h1>
+    <p class="subhead">Blogger, Investor, Web Developer &amp; Youth Entrepreneur</p>
+    <div class="meta-row">
+      <div class="author-chip">
+        <div class="author-avatar">BB</div>
+        <div class="author-info">
+          <p class="author-name">Editorial Profile</p>
+          <p class="pub-date">June 2026</p>
+        </div>
+      </div>
+      <span class="reading-time">5 min read</span>
+    </div>
+  </div>
+</header>
+
+<div class="chapter-rule"></div>
+
+<!-- ARTICLE BODY -->
+<main class="article-body">
+
+  <div class="info-card">
+    <h3>At a Glance</h3>
+    <div class="info-grid">
+      <div class="info-item">
+        <span class="info-label">From</span>
+        <span class="info-value">Singitali Village, Jagatsinghpur, Odisha</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Profession</span>
+        <span class="info-value">Blogger · Web Developer · Investor</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Domain</span>
+        <span class="info-value">bhujaybehera.wordpress.com</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Interests</span>
+        <span class="info-value">Share Market, Bitcoin, Finance, Tech</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="drop-cap">In the quiet lanes of Singitali Village in Jagatsinghpur, Odisha, a young man with a laptop and an unshakeable curiosity about technology and finance began building something far beyond what the village had seen before. His name is Bhujay Behera — and today, he stands as a quietly compelling figure in Odisha's growing landscape of digital entrepreneurship.</p>
+
+  <p>Not every story of ambition begins in a metropolitan tech hub. Bhujay's journey is a testament to the fact that a strong internet connection, a restless mind, and an appetite for learning can transform even the most modest of beginnings into something meaningful.</p>
+
+  <div class="pull-quote">
+    <p>"Through hard work and determination, Bhujay has become one of the most recognizable young entrepreneurial voices from Odisha."</p>
+  </div>
+
+  <h2>Roots &amp; Beginnings</h2>
+
+  <p>Bhujay Behera was born and raised in Odisha, a state known for its rich cultural heritage, ancient temples, and an increasingly ambitious generation of young professionals. Growing up close to his roots in Jagatsinghpur district, Bhujay developed a deep connection to his community — a connection that would later drive many of his entrepreneurial choices.</p>
+
+  <p>From a young age, Bhujay showed an aptitude for spotting patterns — whether in markets, in technology trends, or in the way people around him consumed information. It is this quality, more than anything else, that defines who he is as a professional today.</p>
+
+  <h2>The Digital Entrepreneur</h2>
+
+  <p>Bhujay wears many hats in the digital world. He is a <strong>web developer</strong>, crafting online experiences and building his own digital presence with quiet confidence. He is also a <strong>blogger</strong>, using his WordPress platform to share ideas, explore topics ranging from astronomy to investment, and connect with a wider audience beyond Odisha's borders.</p>
+
+  <p>His interest in <strong>finance and investment</strong> is perhaps the most defining thread of his public persona. Bhujay has explored the world of the share market and cryptocurrencies like Bitcoin, and has worked with platforms such as Upstox to engage in investment and wealth-building. In a state where financial literacy is still growing, his willingness to publicly engage with these topics makes him a genuine resource for young people who want to understand modern finance.</p>
+
+  <div class="pull-quote">
+    <p>"He is a passionate advocate for entrepreneurship and innovation, frequently inspiring others to follow in his footsteps."</p>
+  </div>
+
+  <h2>Curiosity Without Borders</h2>
+
+  <p>One of the most endearing things about Bhujay is the breadth of his curiosity. His blog captures moments that go far beyond business — from writing about rare astronomical events like the Moon-Venus-Jupiter alignment that formed a cosmic smiley face, to curating Spotify playlists and sharing his personal journey with the world. This multidimensionality is rare, and it speaks to a mind that refuses to be boxed in by a single domain.</p>
+
+  <p>For Bhujay, every corner of the internet is a classroom. Whether it is a breaking development in the crypto market or a celestial event visible in the night sky, he approaches it with the same openness and willingness to learn and share.</p>
+
+  <h2>A Role Model for Odisha's Youth</h2>
+
+  <p>In a broader sense, what Bhujay represents is something important for the young people of Odisha. He demonstrates that you do not need to leave your home state — or even your village — to build a digital career and establish a meaningful presence in the modern economy. His journey with blogging, web development, and investment is proof that ambition backed by effort is its own form of infrastructure.</p>
+
+  <p>He is also a philanthropically minded individual, committed to giving back to the community around him and supporting local initiatives in education, health, and economic development. This spirit of generosity enriches not just his own story, but the fabric of the communities he touches.</p>
+
+  <h2>What Lies Ahead</h2>
+
+  <p>The story of Bhujay Behera is still very much being written. As Odisha's tech and startup ecosystem continues to mature, voices like his — grounded in local reality but connected to global trends — will only grow in relevance and influence. Whether through his blog, his financial ventures, his development work, or the conversations he sparks among young people, Bhujay is quietly building something that matters.</p>
+
+  <p>Keep an eye on Singitali Village. Its most digitally ambitious son is just getting started.</p>
+
+  <div class="ending-rule">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+  <div class="tag-row">
+    <span class="tag">Odisha</span>
+    <span class="tag">Entrepreneurship</span>
+    <span class="tag">Blogging</span>
+    <span class="tag">Web Development</span>
+    <span class="tag">Finance &amp; Investment</span>
+    <span class="tag">Youth</span>
+    <span class="tag">Digital India</span>
+  </div>
+
+</main>
+
+<footer>
+  <p>Published June 2026 &nbsp;·&nbsp; Profile Blog &nbsp;·&nbsp; <a href="https://bhujaybehera.wordpress.com" target="_blank">bhujaybehera.wordpress.com</a></p>
+</footer>
+
+</body>
+</html>
